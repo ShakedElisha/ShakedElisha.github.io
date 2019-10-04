@@ -13,20 +13,14 @@
             font: 20px "Montserrat", sans-serif;
             line-height: 1.8;
             color: #f5f6f7;
+            position: relative;
         }
 
         p {
             font-size: 16px;
         }
-        
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
 
         .navbar {
-            padding-top: 15px;
-            padding-bottom: 15px;
             border: 0;
             border-radius: 0;
             margin-bottom: 0;
@@ -39,13 +33,18 @@
         .navbar-nav li a:hover {
             color: #1abc9c !important;
         }
-
-        .bg-1 {
+        #AboutMe {
+            padding-top:100px;
+            padding-bottom:50px;
+            padding-right:20%;
+            padding-left:20%;
             background-color: #f7cb96;
             color: #4c103d;
         }
 
-        .bg-4 {
+        #Contact {
+            padding-top:50px;
+            padding-bottom:50px;
             background-color: #424242;
             color: #ffffff;
         }
@@ -58,41 +57,43 @@
 
 </head>
 
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
 <!-- Navbar -->
-<nav class="navbar navbar-default">
-    <div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-            <a class="navbar-brand" href="#">Me</a>
+            <a class="navbar-brand" href="#">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">WHO</a></li>
-                <li><a href="#">WHAT</a></li>
-                <li><a href="#">WHERE</a></li>
+                <li><a href="#AboutMe">About Me</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Get In Touch</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<!-- About Me -->
 
-<!-- First Container -->
-<body>
+<div id="AboutMe" class="container-fluid text-center">
+    <img src=".\images\pfp.jpg" class="img-circle" alt="PFP" style="width:25%">
+    <h1>Shaked Elisha</h1>
+    <p>I'm a recent graduate with a Masters in Statistics from the University of Pittsburgh.</p>
+    <p>I was born in Israel, when I was five my family moved to Belgium, and when I was 13 we moved to California. I went to the University of Pittsburgh where, through a five year program, I completed my B.S. and M.A. degrees in statistics.</p>
+    <p>Below is my most current Resume.</p>
+    <a href="Shaked Elisha - Resume.pdf" target="_blank" class="btn-default btn-lg">My Resume</a>
+</div>
 
-    <div class="container-fluid bg-1 text-center">
-        <h1>Shaked Elisha</h1>
-        <p>I'm a recent graduate with a Masters in Statistics from the University of Pittsburgh and as you can see I am still learning html :D</p>
-        <a href="Shaked Elisha - Resume.pdf" target="_blank" class="btn-default btn-lg">My Resume</a>
-    </div>
+<!-- Contact -->
 
-</body>
-
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
+<div id="Contact" class="container-fluid text-center">
     <h2 class="section-heading">Let's Get In Touch!</h2>
     <hr class="primary">
     <p>The best way to contact me is by email, as I normally respond within 24 hours. Feel free to write to me, add me on LinkedIn, Facebook, or anything else!</p>
@@ -105,6 +106,8 @@
     <div class="col-sm-4 text-center">
         <p><a href="https://github.com/ShakedElisha">github.com/ShakedElisha</a></p>
     </div>
-</footer>
+</div>
+
+</body>
 
 </html>
